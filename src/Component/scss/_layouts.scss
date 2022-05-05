@@ -1,0 +1,75 @@
+html,
+body {
+    @include customscroll();
+    .App {
+        max-width: 1230px;
+        width: 100%;
+        margin: auto;
+        box-shadow: 0 2px 6px #555;
+    }
+    .container {
+        width: 100%;
+    }
+    .container-fluid {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+       
+    }
+    @media (min-width: $xxs-min) {
+        .container {
+            max-width: 540px;
+        }
+    }
+    @media (min-width: $xs-min) {
+        .container {
+            max-width: 720px;
+        }
+    }
+    @media (min-width: $sm-min) {
+        .container {
+            max-width: 960px;
+        }
+    }
+    @media (min-width: $md-min) {
+        .container {
+            max-width: $container-width;
+        }
+    }
+    --pdSection: 90px;
+    .mainwrapper {
+        width: 100%;
+        margin: auto;
+        @include visible;
+        section{
+            &.pd{
+                 padding: var(--pdSection) 0;
+            }
+           
+        }
+    }
+    @include lg {
+        // CSS responsive large desktop
+    }
+    @include md {
+        // CSS responsive desktop
+    }
+    @include sm {
+        // CSS responsive tablet
+        
+    }
+    @include xs {
+        // CSS responsive mobile
+        --pdSection: 10px;
+    
+    }
+    @include xxs {
+        // CSS responsive small mobile
+    }
+
+    @media (max-width: 500px) {
+    }
+
+    @include maxW(500px) {
+    }
+}
